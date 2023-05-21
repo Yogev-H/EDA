@@ -1,5 +1,5 @@
 Flask==2.0.2
-pandas
+pandas==1.4.0
 pandas-profiling==3.2.0
 openpyxl
 gunicorn
