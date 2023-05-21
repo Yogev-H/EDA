@@ -7,8 +7,7 @@ itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-numpy==1.21.0
-scipy
+
 scikit-learn
 matplotlib
 
