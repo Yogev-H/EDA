@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
 from pandas_profiling import ProfileReport
+import os
 
 app = Flask(__name__)
 
@@ -40,4 +41,5 @@ def analyze():
     return render_template('report.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
