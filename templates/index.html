@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exploratory Data Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <h1 class="title">Exploratory Data Analysis</h1>
+        <p class="subtitle">by Yogev Hadad, Data Scientist</p>
+    </div>
+    <div class="title-space"></div>
+    <div class="content">
+        <form method="POST" action="/analyze" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input">
+            <input type="submit" value="Analyze" class="analyze-button">
+        </form>
+        {% if message %}
+        <p class="error-message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
