@@ -3,6 +3,11 @@
 <head>
     <title>Exploratory Data Analysis</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function showFreeMessage() {
+            document.getElementById('free-message').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -16,7 +21,8 @@
     <div class="content">
         <form method="POST" action="/analyze" enctype="multipart/form-data">
             <input type="file" name="file" class="file-input">
-            <input type="submit" value="Analyze" class="analyze-button">
+            <input type="submit" value="Analyze" class="analyze-button" onclick="showFreeMessage()">
+            <p id="free-message" class="free-message" style="display: none;">Wait... It's FREE!</p>     
         </form>
         {% if message %}
         <p class="error-message">{{ message }}</p>

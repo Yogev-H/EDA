@@ -54,4 +54,11 @@ body {
     text-align: center;
 }
 
+.free-message {
+    font-size: 24px;
+    color: #FF9900;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
 
